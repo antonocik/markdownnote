@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MarkdownNote — Editor Markdown</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f87171'/%3E%3Cpath d='M6 4h20v4H6zM6 12h20v4H6zM6 20h20v4H6z' stroke='white' stroke-width='2' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="app-head">
+      <div class="brand">
+        <div class="brand__mark">MN</div>
+        <h1>MarkdownNote</h1>
+      </div>
+    </header>
+
+    <div class="note-card">
+      <div class="toolbar">
+        <button class="btn--primary" data-help="bold">Bold</button>
+        <button class="btn--primary" data-help="italic">Italic</button>
+        <button class="btn--primary" data-help="link">Link</button>
+        <button class="btn--primary" data-help="image">Image</button>
+        <button class="btn--primary" data-help="list">List</button>
+        <button class="btn--ghost" id="exportMd">Ekspor .md</button>
+        <button class="btn--ghost" id="exportHtml">Ekspor .html</button>
+      </div>
+
+      <div class="toolbar" style="margin-top:12px">
+        <textarea id="note" placeholder="# Tulis catatan Anda di sini..."></textarea>
+        <div id="preview"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
